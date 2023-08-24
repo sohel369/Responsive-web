@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive web design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        
+        .container {
+            width: 100%;
+            /* min-height: 100vh; */
+            padding-left: 8%;
+            padding-right: 8%;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        
+        .navbar {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 50px;
+            cursor: pointer;
+            margin: 30px 0;
+        }
+        
+        .menu-icon {
+            width: 25px;
+            cursor: pointer;
+        }
+        
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+        
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+        
+        nav ul li a:hover {
+            color: darkred;
+        }
+        
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 100px 0;
+        }
+        
+        .col-1 {
+            flex-basis: 40%;
+            position: relative;
+            margin-left: 50px;
+        }
+        
+        .col-1 h2 {
+            font-size: 54px;
+        }
+        
+        .col-1 h3 {
+            font-size: 30px;
+            color: rgb(25, 25, 142);
+            font-weight: 100;
+            margin: 20px 0 10px;
+        }
+        
+        .col-1 p {
+            font-size: 16px;
+            color: rgb(14, 124, 88);
+            font-weight: 100;
+        }
+        
+        .col-1 h4 {
+            margin: 30px 0;
+            font-size: 20px;
+        }
+        
+        button {
+            width: 180px;
+            border: 0;
+            padding: 12px 10px;
+            outline: none;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            background: linear-gradient(to right, #fb5283, #ff3527);
+            transition: width 0.5s;
+        }
+        
+        button img {
+            width: 30px;
+            display: none;
+        }
+        
+        button:hover img {
+            display: block;
+        }
+        
+        button:hover {
+            width: 100px;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="logo.jpg" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#">Game controllers</a></li>
+                    <li><a href="#">VR Accessories</a></li>
+                    <li><a href="#">Media Remotes</a></li>
+                    <li><a href="#">Others</a></li>
+                </ul>
+            </nav>
+            <img src="facebook.png" class="menu-icon">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            <h2>PS4 V2<br>Dualshock 4</h2>
+            <h3>Wireless Controller for PlayStation 4</h3>
+            <p>(Compatible/Generic)</p>
+            <h4>$32.50</h4>
+            <button type="button">Buy Now<img src="pngtree-arrow-shape-black-simple-and-cute-png-image_5235845.png"></button>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+
+
+</body>
+
+</html>
