@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Responsive web design</title>
     <style>
         * {
@@ -33,8 +34,8 @@
             margin: 30px 0;
         }
         
-        .menu-icon {
-            width: 25px;
+        .menu-icon i {
+            /* width: 25px; */
             cursor: pointer;
             display: none;
         }
@@ -200,7 +201,7 @@
             .col-2 .color-box {
                 display: none;
             }
-            .menu-icon {
+            .menu-icon i {
                 display: block;
             }
             #menulist {
@@ -223,22 +224,23 @@
                     <li><a href="#">Others</a></li>
                 </ul>
             </nav>
-            <img src="facebook.png" class="menu-icon" onclick="togglemenu()">
+            <!-- <img src="" class="menu-icon" onclick="togglemenu()"><i class='bx bx-menu'></i> -->
+            <a class="menu-icon"><i class='bx bx-menu' onclick="togglemenu()"></i></a>
         </div>
     </div>
-    <div class="row">
-        <div class="col-1">
+    <div class=" row ">
+        <div class="col-1 ">
             <h2>PS4 V2<br>Dualshock 4</h2>
             <h3>Wireless Controller for PlayStation 4</h3>
             <p>(Compatible/Generic)</p>
             <h4>$320.50</h4>
-            <button type="button" id="demo" onclick="document.getElementById('demo').style.background='green'">Buy Now<img src="arrow.jpg"></button>
+            <button type="button " id="demo " onclick="document.getElementById( 'demo').style.background='green' ">Buy Now<img src="arrow.jpg "></button>
         </div>
-        <div class="col-2">
-            <img src="game.png" class="controller">
-            <div class="color-box">
-                <div class="add-btn">
-                    <img src="plus.jpg">
+        <div class="col-2 ">
+            <img src="game.png " class="controller ">
+            <div class="color-box ">
+                <div class="add-btn ">
+                    <img src="plus.jpg ">
                     <p><small>Add to cart</small></p>
                 </div>
             </div>
@@ -248,7 +250,7 @@
 
     <script>
         var menulist = document.getElementById("menulist");
-        menulist.style.maxHeight = "0px";
+        menulist.style.maxHeight = "0px ";
 
         function togglemenu() {
             if (menulist.style.maxHeight == "0px") {
