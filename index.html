@@ -36,6 +36,7 @@
         .menu-icon {
             width: 25px;
             cursor: pointer;
+            display: none;
         }
         
         nav {
@@ -139,7 +140,7 @@
         }
         
         .col-2.controller {
-            width: 90%;
+            width: 50%;
         }
         
         .color-box {
@@ -149,9 +150,9 @@
             background: linear-gradient(#fb5283, #ff3527);
             border-radius: 20px 0 0 20px;
             height: 100%;
-            width: 80%;
+            width: 40%;
             z-index: -1;
-            transform: translateX(150p);
+            transform: translateX(0);
         }
         
         .add-btn img {
@@ -163,7 +164,49 @@
             text-align: center;
             color: white;
             cursor: pointer;
-            margin: 25px auto;
+        }
+        
+        @media screen and (max-width:600px) {
+            .container nav ul {
+                width: 100%;
+                background: orange;
+                display: inline-block;
+                top: 20%;
+                right: 0;
+                position: absolute;
+            }
+            .container nav ul li {
+                display: block;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .col-1 h2 {
+                font-size: 15px;
+            }
+            .col-1 h3 {
+                font-size: 16px;
+            }
+            .col-1 {
+                position: absolute;
+                top: 40%;
+            }
+            img.controller {
+                width: 10px;
+                /* position: absolute;
+                top: 50%;
+                right: 0;
+                bottom: 0; */
+            }
+            .col-2 .color-box {
+                display: none;
+            }
+            .menu-icon {
+                display: block;
+            }
+            #menulist {
+                overflow: hidden;
+                transition: .4s;
+            }
         }
     </style>
 </head>
@@ -173,14 +216,14 @@
         <div class="navbar">
             <img src="logo.jpg" class="logo">
             <nav>
-                <ul>
+                <ul id="menulist">
                     <li><a href="#">Game controllers</a></li>
                     <li><a href="#">VR Accessories</a></li>
                     <li><a href="#">Media Remotes</a></li>
                     <li><a href="#">Others</a></li>
                 </ul>
             </nav>
-            <img src="facebook.png" class="menu-icon">
+            <img src="facebook.png" class="menu-icon" onclick="togglemenu()">
         </div>
     </div>
     <div class="row">
@@ -188,22 +231,38 @@
             <h2>PS4 V2<br>Dualshock 4</h2>
             <h3>Wireless Controller for PlayStation 4</h3>
             <p>(Compatible/Generic)</p>
-            <h4>$32.50</h4>
-            <button type="button">Buy Now<img src="arrow.jpg"></button>
+            <h4>$320.50</h4>
+            <button type="button" id="demo" onclick="document.getElementById('demo').style.background='green'">Buy Now<img src="arrow.jpg"></button>
         </div>
         <div class="col-2">
             <img src="game.png" class="controller">
             <div class="color-box">
                 <div class="add-btn">
                     <img src="plus.jpg">
-                    <p><small>Add to cart</small></p.>
+                    <p><small>Add to cart</small></p>
                 </div>
             </div>
         </div>
     </div>
 
 
+    <script>
+        var menulist = document.getElementById("menulist");
+        menulist.style.maxHeight = "0px";
 
+        function togglemenu() {
+            if (menulist.style.maxHeight == "0px") {
+                {
+                    menulist.style.maxHeight = "100%";
+                }
+
+
+
+            } else {
+                menulist.style.maxHeight = "0px";
+            }
+        }
+    </script>
 </body>
 
 </html>
